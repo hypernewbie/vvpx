@@ -1,4 +1,6 @@
-# Vvpx - AI Slop CMake Build Wrapper for libvpx
+# Vvpx - CMake Build Wrapper for libvpx
+
+[![build](https://github.com/hypernewbie/vvpx/actions/workflows/build.yml/badge.svg)](https://github.com/hypernewbie/vvpx/actions/workflows/build.yml)
 
 AI slop CMake build wrapper for libvpx, the WebM VP8/VP9 SDK.
 
@@ -39,7 +41,7 @@ All VP8/VP9 codec features enabled:
 NASM is bundled - just build:
 
 ```bash
-git clone --recursive https://github.com/user/vvpx
+git clone --recursive https://github.com/hypernewbie/vvpx
 cd vvpx
 cmake -B build
 cmake --build build --config Release
@@ -54,7 +56,7 @@ Ninja is recommended for faster builds:
 sudo apt install nasm  # Debian/Ubuntu
 # or: sudo dnf install nasm  # Fedora
 
-git clone --recursive https://github.com/user/vvpx
+git clone --recursive https://github.com/hypernewbie/vvpx
 cd vvpx
 cmake -B build -G Ninja
 ninja -C build
