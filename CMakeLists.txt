@@ -15,37 +15,16 @@ else()
     include(cmake/VpxAssembly.cmake)
 endif()
 
-# Apply SIMD flags for specific files (GCC/Clang)
-if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID MATCHES "Clang")
-    foreach(source_file ${VPX_C_SOURCES})
-        if(source_file MATCHES "avx512")
-             set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mavx512f;-mavx512bw;-mavx512dq")
-        elseif(source_file MATCHES "avx2")
-             set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mavx2")
-        elseif(source_file MATCHES "avx")
-             set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mavx")
-        elseif(source_file MATCHES "sse4")
-             set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-msse4.1")
-        elseif(source_file MATCHES "ssse3")
-             set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mssse3")
-        endif()
-    endforeach()
-endif()
-
 # Library target
 add_library(vpx)
 
 if(VPX_ARCH_ARM64)
     target_sources(vpx PRIVATE ${VPX_C_SOURCES_ARM})
 else()
-    target_sources(vpx PRIVATE ${VPX_C_SOURCES})
-    if(NOT VPX_NO_ASM)
-        target_sources(vpx PRIVATE ${VPX_X86_ASM_SOURCES})
-    else()
-        target_compile_definitions(vpx PRIVATE VPX_DISABLE_ASM)
-    endif()
+    target_sources(vpx PRIVATE ${VPX_C_SOURCES} ${VPX_X86_ASM_SOURCES})
 endif()
 
+# Include directories
 target_include_directories(vpx
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/config/${VPX_PLATFORM_DIR}>
@@ -62,6 +41,13 @@ if(UNIX AND NOT APPLE)
     target_link_libraries(vpx PRIVATE Threads::Threads)
 endif()
 
+# On macOS, we might need pthread too, but it's usually implicit? 
+# libvpx code checks HAVE_PTHREAD_H and uses pthread.
+if(APPLE)
+    # No explicit link needed usually, but good to be safe if strictly required
+    # target_link_libraries(vpx PRIVATE pthread)
+endif()
+
 # Install rules
 include(GNUInstallDirs)
 install(TARGETS vpx
@@ -73,7 +59,7 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/libvpx/vpx/
     FILES_MATCHING PATTERN "*.h"
 )
 
-# Test executable (only if this is the top-level project)
+# Tests
 if(PROJECT_IS_TOP_LEVEL)
     add_executable(version_test test/version_test.c)
     target_link_libraries(version_test PRIVATE vpx)
