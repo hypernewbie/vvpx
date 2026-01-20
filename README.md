@@ -16,7 +16,7 @@ libvpx's official build system uses a custom `configure` script and Makefiles. T
 |----------|-------------|----------|-------------------|
 | Windows | x64 | MSVC | SSE2/SSE3/SSSE3/SSE4.1/AVX/AVX2 via NASM |
 | Linux | x64 | GCC/Clang | SSE2/SSE3/SSSE3/SSE4.1/AVX/AVX2 via NASM |
-| macOS | ARM64 (Apple Silicon) | Clang | Generic C only |
+| macOS | ARM64 (Apple Silicon) | Clang | ARM NEON intrinsics |
 
 ### Not Supported
 
@@ -81,9 +81,7 @@ Make also works: `cmake -B build && make -C build -j$(nproc)`
 |----------------|---------|------|-------------|
 | ✅ Yes (x86_64) | 234 C + 49 ASM | Full SSE2/AVX/AVX2 | Fast |
 | ❌ No (x86_64) | 166 C (generic) | None | Slower |
-| N/A (ARM64) | 166 C (generic) | None* | Slower |
-
-*ARM NEON optimisations are future work.
+| N/A (ARM64) | 166 C + 95 SIMD | ARM NEON | Fast |
 
 ### Caveats (No NASM)
 
@@ -144,13 +142,7 @@ vvpx/
 
 ## Future Work
 
-### ARM NEON Optimisations
-
-macOS ARM64 currently uses generic C implementations. Future improvement:
-- Extract ARM NEON source lists from `.mk` files
-- Generate proper ARM RTCD headers
-- NEON intrinsics are in `.c` files (not assembly)
-
+### 32-bit Support
 ## Credits
 
 - [libvpx](https://chromium.googlesource.com/webm/libvpx/) - The WebM Project

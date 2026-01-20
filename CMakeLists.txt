@@ -3,6 +3,7 @@ project(vpx VERSION 1.15.1 LANGUAGES C CXX)
 
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
+option(VPX_ENABLE_NEON "Enable ARM NEON optimisations (macOS ARM64)" ON)
 
 # MSVC: Enable parallel compilation
 if(MSVC)
@@ -15,6 +16,9 @@ include(cmake/VpxConfig.cmake)
 # Source lists
 if(VPX_ARCH_ARM64)
     include(cmake/VpxSourcesArm.cmake)
+    if(VPX_ENABLE_NEON AND APPLE)
+        include(cmake/VpxSourcesArmNeon.cmake)
+    endif()
 else()
     include(cmake/VpxSources.cmake)
     include(cmake/VpxSourcesArm.cmake)  # For generic C fallback
@@ -47,7 +51,13 @@ endif()
 add_library(vpx)
 
 if(VPX_ARCH_ARM64)
-    target_sources(vpx PRIVATE ${VPX_C_SOURCES_ARM})
+    if(VPX_ENABLE_NEON AND APPLE)
+        target_sources(vpx PRIVATE ${VPX_C_SOURCES_ARM} ${VPX_NEON_SOURCES})
+        message(STATUS "Building with ARM NEON optimisations")
+    else()
+        target_sources(vpx PRIVATE ${VPX_C_SOURCES_ARM})
+        message(STATUS "Building with generic C (no NEON)")
+    endif()
 elseif(VPX_NO_ASM)
     # No NASM available - fall back to generic C (like ARM)
     target_sources(vpx PRIVATE ${VPX_C_SOURCES_ARM})

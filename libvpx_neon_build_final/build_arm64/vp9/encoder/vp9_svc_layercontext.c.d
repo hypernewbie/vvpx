@@ -1,0 +1,189 @@
+vp9/encoder/vp9_svc_layercontext.c.o vp9/encoder/vp9_svc_layercontext.c.d: ../vp9/encoder/vp9_svc_layercontext.c \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/ptrcheck.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
+  ../vp9/encoder/vp9_aq_cyclicrefresh.h ../vpx/vpx_integer.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_header_macro.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_ptrdiff_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_rsize_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_null.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_offsetof.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/inttypes.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/inttypes.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_inttypes.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_bounds.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int16_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint8_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint32_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h \
+  ../vp9/common/vp9_blockd.h vpx_config.h ../vpx_dsp/vpx_dsp_common.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
+  ../vpx_ports/mem.h ../vpx_scale/yv12config.h ../vpx/vpx_codec.h \
+  ../vpx/./vpx_image.h ../vpx/./vpx_integer.h ../vpx/vpx_frame_buffer.h \
+  ../vp9/common/vp9_common_data.h ../vp9/common/vp9_enums.h \
+  ../vp9/common/vp9_entropy.h ../vpx_dsp/prob.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
+  ../vpx_dsp/./vpx_dsp_common.h ../vp9/common/vp9_common.h \
+  ../vpx_mem/vpx_mem.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine/_structs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/arm/_structs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int8_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int32_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ucontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/__endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/_OSByteOrder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/alloca.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ct_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_strings.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_common.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h \
+  ../vpx_ports/bitops.h ../vp9/common/vp9_entropymode.h \
+  ../vp9/common/vp9_entropymv.h ../vp9/common/vp9_mv.h \
+  ../vp9/common/vp9_filter.h ../vpx_dsp/vpx_filter.h \
+  ../vp9/common/vp9_scale.h ../vpx_dsp/vpx_convolve.h \
+  ../vp9/common/vp9_seg_common.h ../vp9/common/vp9_tile_common.h \
+  ../vp9/encoder/vp9_block.h ../vp9/encoder/vp9_skin_detection.h \
+  ../vpx_dsp/skin_detection.h ../vpx_util/vpx_write_yuv_frame.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h \
+  ../vp9/encoder/vp9_encoder.h vpx_dsp_rtcd.h \
+  ../vpx/internal/vpx_codec_internal.h ../vpx/internal/../vpx_decoder.h \
+  ../vpx/internal/.././vpx_codec.h \
+  ../vpx/internal/.././vpx_frame_buffer.h \
+  ../vpx/internal/../vpx_encoder.h \
+  ../vpx/internal/.././vpx_ext_ratectrl.h \
+  ../vpx/internal/../././vpx_integer.h ../vpx/internal/../././vpx_tpl.h \
+  ../vpx/internal/.././././vpx_integer.h \
+  ../vpx/internal/.././././vpx_codec.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_header_macro.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg___gnuc_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_arg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg___va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_copy.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/setjmp.h \
+  ../vpx/vpx_ext_ratectrl.h ../vpx/vp8cx.h ../vpx/./vp8.h \
+  ../vpx/././vpx_codec.h ../vpx/././vpx_image.h ../vpx/./vpx_encoder.h \
+  ../vpx/./vpx_ext_ratectrl.h ../vpx/vpx_tpl.h ../vpx_dsp/variance.h \
+  ../vpx_dsp/psnr.h ../vpx/vpx_encoder.h ../vpx_ports/system_state.h \
+  ../vpx_util/vpx_pthread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/sched.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/pthread_impl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timespec.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/qos.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h \
+  ../vpx_util/vpx_thread.h ../vpx_util/vpx_timestamp.h \
+  ../vp9/common/vp9_alloccommon.h ../vp9/common/vp9_ppflags.h \
+  ../vp9/common/vp9_thread_common.h ../vp9/common/vp9_loopfilter.h \
+  ../vp9/common/vp9_onyxc_int.h vp9_rtcd.h \
+  ../vp9/common/vp9_frame_buffers.h ../vp9/common/vp9_quant_common.h \
+  ../vp9/common/vp9_postproc.h ../vp9/common/vp9_mfqe.h \
+  ../vp9/encoder/vp9_alt_ref_aq.h ../vp9/encoder/vp9_context_tree.h \
+  ../vp9/encoder/vp9_encodemb.h ../vp9/encoder/vp9_ethread.h \
+  ../vp9/encoder/vp9_ext_ratectrl.h ../vp9/encoder/vp9_firstpass.h \
+  ../vp9/encoder/vp9_firstpass_stats.h ../vp9/encoder/vp9_lookahead.h \
+  ../vp9/encoder/vp9_ratectrl.h ../vp9/encoder/vp9_job_queue.h \
+  ../vp9/encoder/vp9_mbgraph.h ../vp9/encoder/vp9_mcomp.h \
+  ../vp9/encoder/vp9_noise_estimate.h ../vp9/encoder/vp9_quantize.h \
+  ../vp9/encoder/vp9_rd.h ../vp9/encoder/vp9_cost.h \
+  ../vp9/encoder/vp9_speed_features.h \
+  ../vp9/encoder/vp9_svc_layercontext.h ../vp9/encoder/vp9_tokenize.h \
+  ../vp9/encoder/vp9_treewriter.h ../vpx_dsp/bitwriter.h \
+  ../vpx_ports/compiler_attributes.h ../vp9/encoder/vp9_extend.h

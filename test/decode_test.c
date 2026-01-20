@@ -176,19 +176,19 @@ int decode_ivf_file(const char *filename) {
 // Run all test files
 int run_all_tests() {
     const char *test_files[] = {
-        "test/videos/vp9_320x240_30fps.ivf",
-        "test/videos/vp9_64x64_tiny.ivf",
-        "test/videos/vp9_720p.ivf",
-        "test/videos/vp9_odd_dimensions.ivf",
-        "test/videos/vp9_high_quality.ivf",
-        "test/videos/vp9_low_quality.ivf",
-        "test/videos/vp9_single_frame.ivf",
-        "test/videos/vp9_60fps.ivf",
-        "test/videos/vp8_320x240_30fps.ivf",
-        "test/videos/vp8_640x480.ivf",
-        "test/videos/vp9_colorbars.ivf",
-        "test/videos/vp9_solid_blue.ivf",
-        "test/videos/vp9_noise.ivf",
+        "videos/vp9_320x240_30fps.ivf",
+        "videos/vp9_64x64_tiny.ivf",
+        "videos/vp9_720p.ivf",
+        "videos/vp9_odd_dimensions.ivf",
+        "videos/vp9_high_quality.ivf",
+        "videos/vp9_low_quality.ivf",
+        "videos/vp9_single_frame.ivf",
+        "videos/vp9_60fps.ivf",
+        "videos/vp8_320x240_30fps.ivf",
+        "videos/vp8_640x480.ivf",
+        "videos/vp9_colorbars.ivf",
+        "videos/vp9_solid_blue.ivf",
+        "videos/vp9_noise.ivf",
         NULL
     };
     
