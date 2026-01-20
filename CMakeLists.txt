@@ -4,6 +4,11 @@ project(vpx VERSION 1.15.1 LANGUAGES C CXX)
 # Options
 option(BUILD_SHARED_LIBS "Build shared library" OFF)
 
+# MSVC: Enable parallel compilation
+if(MSVC)
+    add_compile_options($<$<COMPILE_LANGUAGE:C,CXX>:/MP>)
+endif()
+
 # Platform detection
 include(cmake/VpxConfig.cmake)
 
@@ -51,13 +56,6 @@ if(UNIX AND NOT APPLE)
     target_link_libraries(vpx PRIVATE Threads::Threads)
 endif()
 
-# On macOS, we might need pthread too, but it's usually implicit? 
-# libvpx code checks HAVE_PTHREAD_H and uses pthread.
-if(APPLE)
-    # No explicit link needed usually, but good to be safe if strictly required
-    # target_link_libraries(vpx PRIVATE pthread)
-endif()
-
 # Install rules
 include(GNUInstallDirs)
 install(TARGETS vpx
@@ -84,4 +82,3 @@ if(PROJECT_IS_TOP_LEVEL)
     add_executable(ivf_format_test test/ivf_format_test.c)
     target_link_libraries(ivf_format_test PRIVATE vpx)
 endif()
-

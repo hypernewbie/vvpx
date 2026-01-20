@@ -1,8 +1,10 @@
-# Vvpx
+# Vvpx - AI Slop CMake Build Wrapper for libvpx
 
-Unofficial CMake build wrapper for libvpx, the WebM VP8/VP9 SDK.
+AI slop CMake build wrapper for libvpx, the WebM VP8/VP9 SDK.
 
 Uses [ShiftMediaProject's libvpx fork](https://github.com/ShiftMediaProject/libvpx) as a submodule, providing pre-configured source lists and RTCD headers.
+
+> WARNING: AI slop head. Don't use this. It's a mess. May be really buggy.
 
 ## Why This Exists
 
@@ -32,12 +34,33 @@ All VP8/VP9 codec features enabled:
 
 ## Quick Start
 
+### Windows
+
+NASM is bundled - just build:
+
 ```bash
 git clone --recursive https://github.com/user/vvpx
 cd vvpx
 cmake -B build
-cmake --build build
+cmake --build build --config Release
 ```
+
+### Linux / macOS
+
+Ninja is recommended for faster builds:
+
+```bash
+# Install NASM (Linux only, not needed on macOS ARM)
+sudo apt install nasm  # Debian/Ubuntu
+# or: sudo dnf install nasm  # Fedora
+
+git clone --recursive https://github.com/user/vvpx
+cd vvpx
+cmake -B build -G Ninja
+ninja -C build
+```
+
+Make also works: `cmake -B build && make -C build -j$(nproc)`
 
 ### CMake Options
 
@@ -48,10 +71,9 @@ cmake --build build
 ### Prerequisites
 
 - CMake 3.21+
-- NASM (optional, for SIMD optimisations on x86_64)
-  - Windows: `choco install nasm`
-  - Linux: `apt install nasm`
-  - macOS ARM64: Not needed
+- **Windows**: NASM included in `tools/` (no install needed)
+- **Linux**: `apt install nasm` or `dnf install nasm`
+- **macOS ARM64**: No NASM needed (uses generic C)
 
 ### Build Modes
 
@@ -110,6 +132,8 @@ vvpx/
 │   ├── win_x64/             # Windows x64 headers
 │   ├── linux_x64/           # Linux x64 headers
 │   └── macos_arm64/         # macOS ARM64 headers (generic C RTCD)
+├── tools/
+│   └── nasm-3.01/           # Bundled NASM for Windows
 ├── scripts/
 │   ├── extract_sources.py   # Extract sources from SMP
 │   └── gen_rtcd_arm.py      # Generate ARM RTCD headers
