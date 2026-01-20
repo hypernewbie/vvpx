@@ -21,6 +21,28 @@ else()
     include(cmake/VpxAssembly.cmake)
 endif()
 
+# Apply SIMD flags to source files (for GCC/Clang)
+if(NOT MSVC AND NOT VPX_ARCH_ARM64)
+    foreach(source_file ${VPX_C_SOURCES})
+        get_filename_component(filename ${source_file} NAME)
+        if(filename MATCHES "_mmx\\.c$")
+            set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mmmx")
+        elseif(filename MATCHES "_sse2\\.c$")
+            set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-msse2")
+        elseif(filename MATCHES "_ssse3\\.c$")
+            set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mssse3")
+        elseif(filename MATCHES "_sse4\\.c$")
+            set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-msse4.1")
+        elseif(filename MATCHES "_avx\\.c$")
+            set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mavx")
+        elseif(filename MATCHES "_avx2\\.c$")
+            set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mavx2")
+        elseif(filename MATCHES "_avx512\\.c$")
+            set_source_files_properties(${source_file} PROPERTIES COMPILE_OPTIONS "-mavx512f;-mavx512cd;-mavx512bw;-mavx512dq;-mavx512vl")
+        endif()
+    endforeach()
+endif()
+
 # Library target
 add_library(vpx)
 
@@ -53,7 +75,7 @@ endif()
 
 if(UNIX AND NOT APPLE)
     find_package(Threads REQUIRED)
-    target_link_libraries(vpx PRIVATE Threads::Threads)
+    target_link_libraries(vpx PRIVATE Threads::Threads m)
 endif()
 
 # Install rules

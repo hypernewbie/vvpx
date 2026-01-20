@@ -7,6 +7,9 @@ VPX_ARCH_X86_64 equ 1
 %elifidn __OUTPUT_FORMAT__,x64
 VPX_ARCH_X86 equ 0
 VPX_ARCH_X86_64 equ 1
+%elifidn __OUTPUT_FORMAT__,elf64
+VPX_ARCH_X86 equ 0
+VPX_ARCH_X86_64 equ 1
 %elifidn __OUTPUT_FORMAT__,win32
 VPX_ARCH_X86 equ 1
 VPX_ARCH_X86_64 equ 0
