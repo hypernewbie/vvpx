@@ -48,18 +48,12 @@ jobs:
       if: matrix.os == 'windows-latest'
       run: |
         .\build\Release\version_test.exe
+        .\build\Release\ivf_format_test.exe --all
         .\build\Release\decode_test.exe --all
-        .\build\Release\ivf_format_test.exe
 
-    - name: Test (Linux)
-      if: matrix.os == 'ubuntu-latest'
+    - name: Test (Linux/macOS)
+      if: matrix.os != 'windows-latest'
       run: |
         ./build/version_test
+        ./build/ivf_format_test --all
         ./build/decode_test --all
-        ./build/ivf_format_test
-
-    - name: Test (macOS)
-      if: matrix.os == 'macos-14'
-      run: |
-        ./build/version_test
-        ./build/ivf_format_test
