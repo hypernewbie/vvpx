@@ -1,0 +1,54 @@
+# Requested
+tmp/
+temp/
+
+# Build directories
+build/
+out/
+install/
+dist/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.ninja
+
+# Visual Studio / Windows
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.user
+Debug/
+Release/
+x64/
+x86/
+*.pdb
+*.obj
+*.exe
+*.dll
+*.lib
+*.ilk
+*.exp
+Thumbs.db
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ruff_cache/
+.pytest_cache/
+venv/
+.venv/
+env/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
