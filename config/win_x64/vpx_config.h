@@ -32,15 +32,47 @@
 #define HAVE_DSPR2 0
 #define HAVE_MSA 0
 #define HAVE_MIPS64 0
+#if !defined(VPX_DISABLE_ASM)
 #define HAVE_MMX 1
+#else
+#define HAVE_MMX 0
+#endif
+#if !defined(VPX_DISABLE_ASM)
 #define HAVE_SSE 1
+#else
+#define HAVE_SSE 0
+#endif
+#if !defined(VPX_DISABLE_ASM)
 #define HAVE_SSE2 1
+#else
+#define HAVE_SSE2 0
+#endif
+#if !defined(VPX_DISABLE_ASM)
 #define HAVE_SSE3 1
+#else
+#define HAVE_SSE3 0
+#endif
+#if !defined(VPX_DISABLE_ASM)
 #define HAVE_SSSE3 1
+#else
+#define HAVE_SSSE3 0
+#endif
+#if !defined(VPX_DISABLE_ASM)
 #define HAVE_SSE4_1 1
+#else
+#define HAVE_SSE4_1 0
+#endif
+#if !defined(VPX_DISABLE_ASM)
 #define HAVE_AVX 1
+#else
+#define HAVE_AVX 0
+#endif
+#if !defined(VPX_DISABLE_ASM)
 #define HAVE_AVX2 1
-#if _MSC_VER >= 1910
+#else
+#define HAVE_AVX2 0
+#endif
+#if !defined(VPX_DISABLE_ASM) && _MSC_VER >= 1910
 #define HAVE_AVX512 1
 #else
 #define HAVE_AVX512 0

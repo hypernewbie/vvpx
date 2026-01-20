@@ -48,10 +48,28 @@ cmake --build build
 ### Prerequisites
 
 - CMake 3.21+
-- NASM (Windows/Linux x64 for SIMD optimisations)
+- NASM (optional, for SIMD optimisations on x86_64)
   - Windows: `choco install nasm`
   - Linux: `apt install nasm`
   - macOS ARM64: Not needed
+
+### Build Modes
+
+| NASM Available | Sources | SIMD | Performance |
+|----------------|---------|------|-------------|
+| ✅ Yes (x86_64) | 234 C + 49 ASM | Full SSE2/AVX/AVX2 | Fast |
+| ❌ No (x86_64) | 166 C (generic) | None | Slower |
+| N/A (ARM64) | 166 C (generic) | None* | Slower |
+
+*ARM NEON optimisations are future work.
+
+### Caveats (No NASM)
+
+When building without NASM on x86_64:
+- The library uses generic C fallbacks (same as ARM)
+- `version_test` works (confirms library builds correctly)
+- `decode_test` is not built (libvpx RTCD has internal SIMD dependencies)
+- For full decode functionality, install NASM
 
 ## Usage
 

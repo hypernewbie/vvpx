@@ -4,6 +4,14 @@ if(NOT VPX_ARCH_X86_64)
     return()
 endif()
 
+# Try to find NASM, but don't fail if not found
+find_program(NASM_EXECUTABLE nasm)
+if(NOT NASM_EXECUTABLE)
+    message(WARNING "NASM not found - building without SIMD optimizations")
+    set(VPX_NO_ASM TRUE)
+    return()
+endif()
+
 enable_language(ASM_NASM)
 
 # Output format

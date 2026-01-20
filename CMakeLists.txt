@@ -12,6 +12,7 @@ if(VPX_ARCH_ARM64)
     include(cmake/VpxSourcesArm.cmake)
 else()
     include(cmake/VpxSources.cmake)
+    include(cmake/VpxSourcesArm.cmake)  # For generic C fallback
     include(cmake/VpxAssembly.cmake)
 endif()
 
@@ -20,6 +21,10 @@ add_library(vpx)
 
 if(VPX_ARCH_ARM64)
     target_sources(vpx PRIVATE ${VPX_C_SOURCES_ARM})
+elseif(VPX_NO_ASM)
+    # No NASM available - fall back to generic C (like ARM)
+    target_sources(vpx PRIVATE ${VPX_C_SOURCES_ARM})
+    message(STATUS "Building with generic C sources (no SIMD)")
 else()
     target_sources(vpx PRIVATE ${VPX_C_SOURCES} ${VPX_X86_ASM_SOURCES})
 endif()
@@ -30,6 +35,11 @@ target_include_directories(vpx
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/config/${VPX_PLATFORM_DIR}>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/libvpx>
 )
+
+# Define VPX_DISABLE_ASM when building without NASM
+if(VPX_NO_ASM)
+    target_compile_definitions(vpx PUBLIC VPX_DISABLE_ASM)
+endif()
 
 # Platform-specific settings
 if(WIN32)
@@ -63,4 +73,15 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/libvpx/vpx/
 if(PROJECT_IS_TOP_LEVEL)
     add_executable(version_test test/version_test.c)
     target_link_libraries(version_test PRIVATE vpx)
+    
+    # decode_test requires full SIMD build (NASM on x86_64, or native ARM)
+    # Generic C fallback has RTCD init issues with libvpx internals
+    if(NOT VPX_NO_ASM OR VPX_ARCH_ARM64)
+        add_executable(decode_test test/decode_test.c)
+        target_link_libraries(decode_test PRIVATE vpx)
+    endif()
+    
+    add_executable(ivf_format_test test/ivf_format_test.c)
+    target_link_libraries(ivf_format_test PRIVATE vpx)
 endif()
+
